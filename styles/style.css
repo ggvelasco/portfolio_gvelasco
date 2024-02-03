@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --main-color: #111111;
+    --second-color: #F6f6f6;
+    --third-color: #22d4fd;
+    --hover-color: #272727;
+
+    --font-main: 'Krona One', sans-serif;
+    --font-second: 'Montserrat', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+
+.header__menu__link {
+    text-decoration: none;
+    font-family: var(--font-second);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--third-color)
+    
+}
+
+.apresentacao{
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--font-main);
+}
+
+.titulo-destaque{
+    /* color: var(--third-color); */
+    background: linear-gradient(
+        135deg, #ff00d2, #fed90f, #00a2ff, #09f1b8, #ff00d2, #fed90f, #00a2ff, #09f1b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 500% 500%;
+        animation: gradient 30s ease infinite;
+            
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+    
+    
+}
+
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--font-second);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.apresentacao__links_subtitulo {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__social {
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--third-color);
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--second-color);
+    font-family: var(--font-second);
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--hover-color);
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.footer {
+    text-align: center;
+    font-family: var(--font-second);
+    font-size: 1.5rem;
+    font-weight: 400px;
+    padding: 24px;
+    color: var(--main-color);
+    background-color: var(--third-color);
+
+}
+
+@media (max-width: 1200px) {
+    
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+    
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+    
+
+}
